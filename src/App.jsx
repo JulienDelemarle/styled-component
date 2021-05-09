@@ -1,9 +1,10 @@
-import SampleComponent from './components/SampleComponent';
+import CocktailsGallery from './components/CocktailsGallery';
 
 function App() {
   return (
     <div className="App">
-      <SampleComponent />
+      <h1>Cocktails</h1>
+      <CocktailsGallery />
     </div>
   );
 }
