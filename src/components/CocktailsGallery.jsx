@@ -30,7 +30,7 @@ function CocktailsGallery() {
       </select>
       <ul>
         {cocktails.map((cocktail) => {
-          return <Cocktail {...cocktail} />;
+          return <Cocktail key={cocktail.idDrink} {...cocktail} />;
         })}
       </ul>
     </>

@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-function Cocktail({ strDrink, strDrinkThumb }) {
+function Cocktail({ strDrink, strDrinkThumb, idDrink }) {
   return (
     <li>
-      <h3>{strDrink}</h3>
-      <img src={strDrinkThumb} alt="" />
+      <Link to={`/${idDrink}`}>
+        <h3>{strDrink}</h3>
+        <img src={strDrinkThumb} alt="" />
+      </Link>
     </li>
   );
 }
@@ -12,6 +15,7 @@ function Cocktail({ strDrink, strDrinkThumb }) {
 Cocktail.propTypes = {
   strDrink: PropTypes.string.isRequired,
   strDrinkThumb: PropTypes.string.isRequired,
+  idDrink: PropTypes.string.isRequired,
 };
 
 export default Cocktail;
